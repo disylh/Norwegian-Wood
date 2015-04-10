@@ -1,7 +1,7 @@
 #include <vector>
 
 class TypoCoderDiv2 {
-public:
+ public:
   int count(std::vector<int> rating) {
     bool flag = true;
     int ret = 0;

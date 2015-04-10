@@ -1,4 +1,3 @@
-
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
@@ -27,7 +26,6 @@
 #include <iomanip>
 #include <numeric>
 
-
 #define s(n) scanf("%d", &n)
 #define sc(n) scanf("%c", &n)
 #define sl(n) scanf("%lld", &n)
@@ -45,7 +43,7 @@ typedef vector<double> VD;
 typedef vector<bool> VB;
 typedef long long LL;
 typedef unsigned long long ULL;
-typedef pair<int,int> PII;
+typedef pair<int, int> PII;
 
 template <typename T, typename TT>
 ostream &operator<<(ostream &s, pair<T, TT> t) {
@@ -57,12 +55,12 @@ ostream &operator<<(ostream &s, vector<T> t) {
   return s;
 }
 
-double get_sec(clock_t t) { return static_cast<double>(t) / CLOCKS_PER_SEC;}
+double get_sec(clock_t t) { return static_cast<double>(t) / CLOCKS_PER_SEC; }
 double get_ms(clock_t t) { return get_sec(t) * 1000; }
 
 class Egalitarianism {
-public:
-  int maxDifference(vector <string> isFriend, int d) {
+ public:
+  int maxDifference(vector<string> isFriend, int d) {
     n_ = isFriend.size();
     VB visited(n_, false);
     dfs(isFriend, visited, 0);
@@ -107,7 +105,7 @@ public:
           flag = true;
           for (int j = 0; j < n_; ++j) {
             if (!visited[j] && isFriend[temp][j] == 'Y') {
-              q[1-curr].push(j);
+              q[1 - curr].push(j);
             }
           }
         }
@@ -147,6 +145,7 @@ public:
     }
     return ret;
   }
-private:
+
+ private:
   int n_;
 };
