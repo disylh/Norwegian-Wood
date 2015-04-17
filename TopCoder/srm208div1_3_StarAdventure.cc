@@ -1,3 +1,4 @@
+#include <cassert>
 #include <vector>
 #include <string>
 #include <iostream>
@@ -78,19 +79,12 @@ class StarAdventure {
     return dp[n - 1][n - 1][n - 1];
   }
 };  
-    // 3 5 8
-    //
-    // 2 4 7
-    // 2 4 8
-    // 2 5 7
-    // 2 5 8
-    // 3 4 7
-    // 3 4 8
-    // 3 5 7
-    // 3 5 8
+
 int main() {
   vector<string> s({"0234342522", "1232142445"});
   StarAdventure sa;
-  cout << sa.mostStars(s) << endl;
+  int ret = sa.mostStars(s);
+  cout << ret << endl;
+  assert(ret == 55);
 }
 
